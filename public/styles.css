@@ -11,6 +11,7 @@
 .container-blog{
     width: 70%;
     margin: auto;
+    min-height: 55vh;
 }
 footer{
     display: flex;
@@ -165,7 +166,7 @@ footer img{
     line-height: 0.7em;
     color: #7d8491;
 }
-.post-excerpt{
+.post-excerpt p{
     font-family: 'ABeeZee', sans-serif;
 }
 .post-author{
@@ -182,23 +183,26 @@ footer img{
 .post-page{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: space-evenly;
+    padding: 50px 0;
 }
 .post-page .post-title{
     color: #000;
     font-size: 3em;
     font-weight: 500;
-    padding-bottom: 15px;
+    padding: 20px 0;
 }
 
 .post-page .post-excerpt{
     color: #000;
     font-size: 2em;
+    padding: 20px 0;
 }
 
 .post-page .post-author{
     padding-bottom: 15px;
+    padding: 20px 0;
 }
 
 .post-page .post-author a,.post-page .post-author p{
@@ -206,7 +210,7 @@ footer img{
 }
 
 .post-page img{
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .back-link{
     font-size: 1.2em;
@@ -231,6 +235,23 @@ select, input, button{
     font-size: 1em;
     border-radius: 5px;
     padding: 5px;
+    border: solid 1px #000;
+}
+input{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+button{
+    position: relative;
+    left: -5px;
+    top: 2px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border: solid 1px #000;
+
 }
 select, input{
     min-width: 150px;

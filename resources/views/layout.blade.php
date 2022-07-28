@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="stripes"></div>
-    <nav>
+    <div class="navbar">
         <div class="social">
             <a href="#"><ion-icon class="ion-icon" name="logo-instagram"></ion-icon></a>
             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
@@ -28,7 +28,7 @@
         <div class="icons">
             <a href="#"><ion-icon name="person-outline"></ion-icon></a>
         </div>
-    </nav>
+    </div>
     <div class="container-blog">
         @yield('content')
     </div>

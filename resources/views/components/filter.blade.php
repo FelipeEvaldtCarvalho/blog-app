@@ -3,13 +3,13 @@
     <div>
         <select name="category-filter" id="category-filter">
             @if($currentCategory)
-            <option value="/?{{ http_build_query(request()->except('category')) }}">Categorias</option>
+            <option value="/?{{ http_build_query(request()->except('category', 'page')) }}">Categorias</option>
             @else
-            <option value="/?{{ http_build_query(request()->except('category')) }}" selected>Categorias</option>
+            <option value="/?{{ http_build_query(request()->except('category', 'page')) }}" selected>Categorias</option>
             @endif
             @foreach ($categories as $category)
             <option 
-                value="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category')) }}"
+                value="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page')) }}"
                 @if($currentCategory)
                 @if ($currentCategory->slug == $category->slug)
                 selected
@@ -24,13 +24,13 @@
     <div>
         <select name="author-filter" id="author-filter">
             @if($currentAuthor)
-            <option value="/?{{ http_build_query(request()->except('author')) }}">Autores</option>
+            <option value="/?{{ http_build_query(request()->except('author', 'page')) }}">Autores</option>
             @else
-            <option value="/?{{ http_build_query(request()->except('author')) }}" selected>Autores</option>
+            <option value="/?{{ http_build_query(request()->except('author', 'page')) }}" selected>Autores</option>
             @endif
             @foreach ($authors as $author)
             <option 
-                value="/?author={{ $author->username }}&{{ http_build_query(request()->except('author')) }}"
+                value="/?author={{ $author->username }}&{{ http_build_query(request()->except('author', 'page')) }}"
                 @if($currentAuthor)
                 @if ($currentAuthor->name == $author->name)
                 selected

@@ -24,7 +24,7 @@ footer{
 }
 .line{
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 100px;
     width: 80%;
     border-top: 2px solid #000 ;
 
@@ -38,7 +38,7 @@ footer{
     font-size: 1.2em;
     text-align: center;
 }
-nav{
+.navbar{
     display: flex;
     height: 140px;
     width: 100%;
@@ -46,7 +46,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-nav a{
+.navbar a{
     font-family: 'Alatsi', sans-serif;
     color: #fff;
     font-size: 1.3em;
@@ -255,4 +255,47 @@ button{
 }
 select, input{
     min-width: 150px;
+}
+.paginate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7a29d0;
+    height: 100px;
+}
+
+.paginate ul a{
+    text-decoration: none;
+}
+.paginate ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    font-size: 1.5em;
+}
+
+.paginate ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5em;
+    width: 1.5em;
+    color: #7a29d0;
+}
+
+.paginate ul li a{
+    color: #7a29d0;
+    display: flex;
+    align-items: center;
+}
+
+.paginate ul li a:active{
+    color: #7a29d0;
+}
+
+.paginate ul .active{
+    background-color: #7a29d0;
+    border-radius: 50%;
+    color: #fffc00;
 }

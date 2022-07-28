@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         return view('posts', [
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->get(),
+            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(5)->withQueryString(),
             'categories' => Category::all(),
             'authors' => User::all(),
             'currentCategory' => Category::firstWhere('slug', request('category')),

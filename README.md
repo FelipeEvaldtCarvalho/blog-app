@@ -1,4 +1,6 @@
-<p align="center"><img src="https://flic.kr/p/2nAXnLZ" width="400"></p>
+<p align="center">
+    ![Alt text](images/logo_no_bg.png?raw=true "Title")
+</p>
 
 <p align="center">
 My Blog App builded in Laravel

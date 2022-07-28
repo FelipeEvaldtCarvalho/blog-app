@@ -1,7 +1,4 @@
-<p align="center">
-    ![Alt text](images/logo_no_bg.png?raw=true "Title")
-</p>
-
+![Alt text](images/logo_no_bg.png?raw=true "Title")
 <p align="center">
 My Blog App builded in Laravel
 </p>

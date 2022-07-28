@@ -1,4 +1,4 @@
-<p align="center"><img src="images/logo_no_bg.png" width="400"></p>
+<p align="center"><img src="https://drive.google.com/file/d/1VIoJT6ansKJT87lqf3uZyRf2dvFqNvfl/view?usp=sharing" width="400"></p>
 
 <p align="center">
 My Blog App builded in Laravel

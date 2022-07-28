@@ -19,8 +19,8 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'category_id' => Category::factory(),
-            'user_id' => User::factory(),
+            'category_id' => Category::all()->random()->id,
+            'user_id' => User::all()->random()->id,
             'slug' =>  $this->faker->slug,
             'title' => $this->faker->sentence,
             'excerpt' => '<p>' . implode('</p>&nbsp;<p>', $this->faker->paragraphs(2)) . '</p>',

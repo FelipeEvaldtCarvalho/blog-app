@@ -3,9 +3,9 @@
     <div>
         <select name="category-filter" id="category-filter">
             @if($currentCategory)
-            <option value="/">Categorias</option>
+            <option value="/?{{ http_build_query(request()->except('category')) }}">Categorias</option>
             @else
-            <option value="/" selected>Categorias</option>
+            <option value="/?{{ http_build_query(request()->except('category')) }}" selected>Categorias</option>
             @endif
             @foreach ($categories as $category)
             <option 
@@ -24,9 +24,9 @@
     <div>
         <select name="author-filter" id="author-filter">
             @if($currentAuthor)
-            <option value="/">Autores</option>
+            <option value="/?{{ http_build_query(request()->except('author')) }}">Autores</option>
             @else
-            <option value="/" selected>Autores</option>
+            <option value="/?{{ http_build_query(request()->except('author')) }}" selected>Autores</option>
             @endif
             @foreach ($authors as $author)
             <option 

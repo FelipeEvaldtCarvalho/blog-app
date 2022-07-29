@@ -395,3 +395,11 @@ select, input{
     top: -80px;
     width: 100%;
 }
+
+.error-msg{
+    padding-top: 10px;
+    width: 100%;
+    text-align: end;
+    color: #f00;
+    font-size: 0.9em;
+}

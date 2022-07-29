@@ -12,5 +12,6 @@ This project aims to study the laravel framework and its features. I've been usi
 In this section I will document the step-by-step learning process I went through to develop the project:
 
 - **[Routing](https://laravel.com/docs/9.x/routing)**
+- **[Blade Templates](https://laravel.com/docs/9.x/blade)**
 - **[Eloquent ORM](https://laravel.com/docs/9.x/eloquent)**
 

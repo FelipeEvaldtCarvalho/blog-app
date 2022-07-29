@@ -14,4 +14,5 @@ In this section I will document the step-by-step learning process I went through
 - **[Routing](https://laravel.com/docs/9.x/routing)**
 - **[Blade Templates](https://laravel.com/docs/9.x/blade)**
 - **[Eloquent ORM](https://laravel.com/docs/9.x/eloquent)**
+- **[Validations](https://laravel.com/docs/9.x/validation)**
 

@@ -26,7 +26,7 @@
             <a class="menu" href="#">SOBRE</a>
         </div>
         <div class="icons">
-            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="/register"><ion-icon name="person-outline"></ion-icon></a>
         </div>
     </div>
     <div class="container-blog">

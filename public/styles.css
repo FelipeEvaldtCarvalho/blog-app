@@ -9,7 +9,7 @@
     font-family: sans-serif;
 }
 .container-blog{
-    width: 70%;
+    width: 80%;
     margin: auto;
     min-height: 55vh;
 }
@@ -138,7 +138,6 @@ footer img{
 .post-div{
     display: flex;
     height: 500px;
-    width: 100%;
     margin: 50px;
 }
 .post-resume{
@@ -231,7 +230,7 @@ footer img{
     align-items: center;
     justify-content: space-evenly;
 }
-select, input, button{
+select, input, .btn-search{
     font-size: 1em;
     border-radius: 5px;
     padding: 5px;
@@ -241,7 +240,7 @@ input{
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
-button{
+.btn-search{
     position: relative;
     left: -5px;
     top: 2px;
@@ -298,4 +297,101 @@ select, input{
     background-color: #7a29d0;
     border-radius: 50%;
     color: #fffc00;
+}
+.form-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.form-box{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    color: #363636;
+}
+
+.form-group{
+    padding: 0 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.form-group input{
+    width: 100%;
+    border-radius: 5px;
+}
+.form-group label{
+    width: 100%;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.form-group input:focus{
+    outline: #7a29d0 1px solid;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 15% 2.5rem;
+    width: 100%;
+
+}
+
+.button-group button{
+    height: 32px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn-register{
+    border: none;
+    background-color: #7a29d0;
+    color: #fff;
+}
+
+.btn-register:hover{
+    background-color: #9c4bf3;
+}
+
+.form-title{
+    padding: 2rem 0;
+}
+
+.registered-link {
+    padding-top: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: #7a29d0;
+    text-align: end;
+    font-size: .9em;
+}
+
+.register-back{
+    position: relative;
+    top: -80px;
+    width: 100%;
 }

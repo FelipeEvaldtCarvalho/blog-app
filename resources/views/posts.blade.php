@@ -2,7 +2,7 @@
 
 
 @section('content')
-        <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
+        <div>
             <x-filter 
                 :categories="$categories" 
                 :authors="$authors"
@@ -10,10 +10,6 @@
                 :currentAuthor="$currentAuthor"
             />
         </div>
-
-        <div>
-            {{ $posts->links('vendor.pagination.default') }}
-         </div >
 
     @foreach ($posts as $post)
         <div class="post-div">

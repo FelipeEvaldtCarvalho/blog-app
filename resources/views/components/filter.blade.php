@@ -57,7 +57,7 @@
                 placeholder="Pesquisar" 
                 value="{{ request('search')}}"
             >
-            <button>
+            <button class="btn-search">
                 <ion-icon 
                     name="search-outline"
                 >

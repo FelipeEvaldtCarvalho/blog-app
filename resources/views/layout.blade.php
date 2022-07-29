@@ -29,6 +29,14 @@
             <a href="/register"><ion-icon name="person-outline"></ion-icon></a>
         </div>
     </div>
+    @if(session()->has('success'))
+    <div id="success-msg" class="notification-container">
+        <div class="notification-box">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <p>{{ session('success') }}</p>
+        </div>
+    </div>
+    @endif
     <div class="container-blog">
         @yield('content')
     </div>
@@ -46,6 +54,8 @@
     </footer>
     <div class="stripes">
     </div>
+    
+        
 </body>
 <script src="{{ asset('scripts.js') }}"></script>
 </html>

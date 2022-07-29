@@ -100,12 +100,12 @@ footer{
 .social a{
     margin-left: 20px;
 }
-ion-icon {
+.social a ion-icon {
     transition: .5s;
 }
 
 
-ion-icon:hover {
+.social a ion-icon:hover {
     color: #7a29d0;
 }
 
@@ -402,4 +402,27 @@ select, input{
     text-align: end;
     color: #f00;
     font-size: 0.9em;
+}
+
+.notification-container{
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    width: 100%;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.notification-box{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(153, 217, 153);
+    padding: 2rem 1rem;
+    color: rgb(0, 89, 0);
+    gap: 1rem;
+}
+
+.notification-box ion-icon{
+    font-size: 2rem;
 }

@@ -40,7 +40,7 @@
                 </div>
                 <div class="button-group">
                     <button class="btn-register" type="submit">Registrar</button>
-                    <a class="registered-link" href="#">Já tem uma conta?</a>
+                    <a class="registered-link" href="/login">Já tem uma conta?</a>
                 </div>
     
             

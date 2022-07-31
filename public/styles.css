@@ -426,3 +426,36 @@ select, input{
 .notification-box ion-icon{
     font-size: 2rem;
 }
+
+#acc-btn{
+    cursor: pointer;
+    transition: .5s;
+}
+
+#acc-btn:hover{
+    color: #7a29d0;
+}
+
+.account-opt{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 50px;
+    top: 45px;
+    gap: 1rem;
+}
+
+.account-opt a{
+    font-size: .8em;
+    transition: .5s;
+}
+
+.account-opt a:hover{
+    color: #7a29d0;
+}
+
+.auth-box{
+    display: flex;
+    gap: 1rem;
+    color: #FFF;
+}

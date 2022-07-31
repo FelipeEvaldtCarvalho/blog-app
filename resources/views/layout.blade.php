@@ -26,7 +26,22 @@
             <a class="menu" href="#">SOBRE</a>
         </div>
         <div class="icons">
-            <a href="/register"><ion-icon name="person-outline"></ion-icon></a>
+            @auth
+                <div class="auth-box">
+                    <p>{{ auth()->user()->name }}</p>
+                    <a><ion-icon name="person-outline"></ion-icon></a>
+                    <form method="post" action="/logout">
+                        @csrf
+                        <button type="submit">Sair</button>
+                    </form>
+                </div>
+            @else
+                <a id="acc-btn" ><ion-icon name="person-outline"></ion-icon></a>
+                <div id="account-opt" class="account-opt">
+                    <a href="/login">Fazer login</a>
+                    <a href="/register">Criar conta</a>
+                </div>
+            @endauth
         </div>
     </div>
     @if(session()->has('success'))

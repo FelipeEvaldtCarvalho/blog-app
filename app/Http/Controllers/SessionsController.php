@@ -18,15 +18,14 @@ class SessionsController extends Controller
             'password' => 'required'
         ]);
 
-        if (auth()->attempt($user)){
-            session()->regenerate();
-            return redirect('/')->with('success', 'Você esta logado!');
+        if (! auth()->attempt($user)){
+            throw ValidationException::withMessages([
+                'email' => 'E-mail incorreto ou inexistente, verifique e tente novamente.',
+            ]);
         }
 
-        throw ValidationException::withMessages([
-            'email' => 'E-mail incorreto ou inexistente, verifique e tente novamente.',
-
-        ]);
+        session()->regenerate();
+        return redirect('/')->with('success', 'Você esta logado!');
     }
 
     public function destroy()

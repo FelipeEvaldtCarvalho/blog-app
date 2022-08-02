@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', [PostController::class, 'index'])->name('home');
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
+Route::post('posts/{post:slug}/comment', [CommentController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 

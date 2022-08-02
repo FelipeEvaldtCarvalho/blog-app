@@ -18,14 +18,14 @@ class PostController extends Controller
             'authors' => User::all(),
             'currentCategory' => Category::firstWhere('slug', request('category')),
             'currentAuthor' => User::firstWhere('username', request('author')),
-
         ]);
     }
 
     public function show(Post $post)
     {
         return view('post', [
-            'post' => $post
+            'post' => $post,
+            'comments' => $post->comments()->paginate(5),
         ]);
     }
 

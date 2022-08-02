@@ -15,4 +15,4 @@ In this section I will document the step-by-step learning process I went through
 - **[Blade Templates](https://laravel.com/docs/9.x/blade)**
 - **[Eloquent ORM](https://laravel.com/docs/9.x/eloquent)**
 - **[Validations](https://laravel.com/docs/9.x/validation)**
-
+- **[Authentication](https://laravel.com/docs/9.x/authentication)**

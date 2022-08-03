@@ -50,19 +50,21 @@
             @if (request('author'))
             <input type="hidden" name="author" value="{{ request('author') }}">
             @endif
-            <input 
-                type="text" 
-                name="search" 
-                id="search" 
-                placeholder="Pesquisar" 
-                value="{{ request('search')}}"
-            >
-            <button class="btn-search">
-                <ion-icon 
-                    name="search-outline"
+            <div class="comment-box">
+                <input 
+                    type="text" 
+                    name="search" 
+                    id="search" 
+                    placeholder="Pesquisar" 
+                    value="{{ request('search')}}"
                 >
-                </ion-icon>
-            </button>
+                <button class="btn-search">
+                    <ion-icon 
+                        name="search-outline"
+                    >
+                    </ion-icon>
+                </button>
+            </div>
         </form>
     </div>
     

@@ -29,11 +29,13 @@
             @auth
                 <div class="auth-box">
                     <p>{{ auth()->user()->name }}</p>
-                    <a><ion-icon name="person-outline"></ion-icon></a>
-                    <form method="post" action="/logout">
-                        @csrf
-                        <button type="submit">Sair</button>
-                    </form>
+                    <a id="acc-btn" ><ion-icon name="person-outline"></ion-icon></a>
+                    <div id="account-opt" class="close-opt">
+                        <form method="post" action="/logout">
+                            @csrf
+                            <button class="close-btn" type="submit">Sair</button>
+                        </form>
+                    </div>
                 </div>
             @else
                 <a id="acc-btn" ><ion-icon name="person-outline"></ion-icon></a>
@@ -52,8 +54,34 @@
         </div>
     </div>
     @endif
+    @if(session()->has('email'))
+    <div id="success-msg" class="notification-container">
+        <div class="notification-box notification-alert">
+            <ion-icon name="alert-outline"></ion-icon>
+            <p>{{ session('email') }}</p>
+        </div>
+    </div>
+    @endif
     <div class="container-blog">
         @yield('content')
+    </div>
+    <div class="news-container">
+        <div class="news-title-box">
+            <img src="/images/mail.png" height="120px">
+            <div>
+                <h2>Mantenha-se informado!</h3>
+                <h3>Receba as novidades em seu e-mail</h4>
+            </div>
+        </div>
+        <form method="POST" class="news-form" id="newsletter" action="/subscribe">
+            @csrf
+            <div class="input-box">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" name="email">
+                <button type="submit" class="news-btn">Enviar</button>
+            </div>
+        </form>
+
     </div>
     <div class="line"></div>
     <footer>

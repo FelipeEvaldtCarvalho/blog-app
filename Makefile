@@ -4,5 +4,8 @@ up: 	 		## Up all docker containers.
 down: 	 		## Up all docker containers.
 	@./vendor/bin/sail down
 
-migrate: 	 		## Up all docker containers.
-	@./vendor/bin/sail ./vendor/bin/sail php artisan migrate
+migrate: 	 		## migrate.
+	@./vendor/bin/sail  php artisan migrate
+
+tinker: 	 		## .
+	@./vendor/bin/sail php artisan tinker

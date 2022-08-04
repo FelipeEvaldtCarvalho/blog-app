@@ -7,8 +7,8 @@ use App\Services\Newsletter;
 
 class NewsletterController extends Controller
 {
-    public function __invoke(Newsletter $newsletter){
-
+    public function __invoke(Newsletter $newsletter)
+    {
         request()->validate([
             'email' => 'required'
         ]);

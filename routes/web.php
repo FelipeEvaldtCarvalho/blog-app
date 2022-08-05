@@ -24,6 +24,10 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
+Route::get('/admin/posts/create', [PostController::class, 'create'])->middleware('admin');
+
+Route::post('/admin/posts/store', [PostController::class, 'store'])->middleware('admin');
+
 Route::post('posts/{post:slug}/comment', [CommentController::class, 'store']);
 
 Route::post('subscribe', NewsletterController::class);

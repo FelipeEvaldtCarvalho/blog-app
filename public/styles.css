@@ -341,7 +341,7 @@ select, input{
     justify-content: center;
 
 }
-.form-group input{
+.form-group input, .form-group select{
     width: 100%;
     border-radius: 15px;
 }
@@ -350,7 +350,7 @@ select, input{
     text-align: left;
     padding-bottom: 5px;
 }
-.form-group input:focus{
+.form-group input:focus, .form-group select:focus{
     outline: #7a29d0 1px solid;
 }
 
@@ -367,7 +367,7 @@ select, input{
 .button-group button{
     height: 32px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 1em;
 }
 
@@ -659,4 +659,22 @@ select, input{
 
 .news-form input:focus{
     outline: none;
+}
+
+.form-group textarea{
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    background-color: #eee;
+    resize: none;
+    font-size: 1em;
+    padding: 10px;
+}
+.form-group textarea:focus{
+    outline: #7a29d0 1px solid;
+    width: 100%;
+}
+
+.m-t{
+    margin-top: 1rem;
 }

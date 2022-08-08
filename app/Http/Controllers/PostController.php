@@ -36,10 +36,11 @@ class PostController extends Controller
         ]);
     }
 
-    public function store() 
+    public function store()
     {
         $attributes = request()->validate([
             'category_id' => ['required', Rule::exists('categories', 'id')],
+            'thumb' => 'required | image',
             'title' => ['required', Rule::unique('posts', 'title')],
             'body' => 'required',
         ]);
@@ -49,6 +50,15 @@ class PostController extends Controller
         $attributes['slug'] = str_replace(' ', '', request('title'));
 
         $attributes['excerpt'] = substr(request('body'), 0, 250);
+
+        if (request()->hasFile('thumb') && request()->file('thumb')->isValid()){
+            $thumb = request()->thumb;
+            $extension ='.' . $thumb->extension();
+            $imgName = md5($thumb->getClientOriginalname() . strtotime("now")) . $extension;
+            request()->thumb->move(public_path('thumbs'), $imgName);
+        }
+
+        $attributes['thumb'] = $imgName;
 
         Post::create($attributes);
 

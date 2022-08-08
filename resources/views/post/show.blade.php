@@ -1,6 +1,6 @@
 @extends('layout')
     @section('content')
-        
+
         <div class="post-page">
             <a class="back-link" href="/"><ion-icon name="chevron-back-outline"></ion-icon>Voltar</a>
             <div>
@@ -9,7 +9,7 @@
                 <p class="post-date">{{ $post->created_at->diffForHumans() }}</p>
             </div>
             <div class="post-excerpt"> {!! $post->body !!} </div>
-            <img src="/images/img_test.png" alt="" height="250" width="250">
+            <img src="{{ asset("thumbs/$post->thumb") }}" alt="" height="250" width="250">
         </div>
 
         <div class="coment-container">

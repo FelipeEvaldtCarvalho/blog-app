@@ -3,10 +3,10 @@
 
 @section('content')
         <div>
-            <x-filter 
-                :categories="$categories" 
+            <x-filter
+                :categories="$categories"
                 :authors="$authors"
-                :currentCategory="$currentCategory" 
+                :currentCategory="$currentCategory"
                 :currentAuthor="$currentAuthor"
             />
         </div>
@@ -14,7 +14,7 @@
     @foreach ($posts as $post)
         <div class="post-div">
             <div class="post-image">
-                <img src="/images/img_test.png" alt="">
+                <img src="{{ asset("thumbs/$post->thumb") }}" alt="">
             </div>
             <div class="post-resume">
                 <p class="post-date">{{ $post->created_at->diffForHumans() }}</p>

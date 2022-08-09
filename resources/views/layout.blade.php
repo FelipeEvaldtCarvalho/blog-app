@@ -30,10 +30,15 @@
                 <div class="auth-box">
                     <p>{{ auth()->user()->name }}</p>
                     <a id="acc-btn" ><ion-icon name="person-outline"></ion-icon></a>
-                    <div id="account-opt" class="close-opt">
-                        <form method="post" action="/logout">
+                    <div id="account-opt" class="close-opt account-opt">
+
+                        @if(auth()->user()->name == 'felipe carvalho')
+                        <a href="/admin/posts">Meus Posts</a>
+                        <a href="/admin/posts/create">Novo Post</a>
+                        @endif
+                        <a id="logout-btn" href="#">Sair</a>
+                        <form method="post" id="logout-form" action="/logout" style="visibility: hidden">
                             @csrf
-                            <button class="close-btn" type="submit">Sair</button>
                         </form>
                     </div>
                 </div>
@@ -97,8 +102,8 @@
     </footer>
     <div class="stripes">
     </div>
-    
-        
+
+
 </body>
 <script src="{{ asset('scripts.js') }}"></script>
 </html>

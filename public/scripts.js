@@ -46,3 +46,12 @@ function show_acc_opt () {
 }
 
 acc_button.onclick = show_acc_opt;
+
+const logout_btn = document.getElementById('logout-btn');
+const logout_form = document.getElementById('logout-form');
+
+logout_btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    logout_form.submit();
+} )
+

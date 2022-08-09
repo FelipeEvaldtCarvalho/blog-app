@@ -70,7 +70,7 @@ footer{
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  
+
 .menu:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -140,6 +140,14 @@ footer img{
     height: 500px;
     margin: 50px;
 }
+.admin-post-div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 65px auto;
+    width: 70%;
+
+}
 .post-resume{
     display: flex;
     flex-direction: column;
@@ -147,12 +155,39 @@ footer img{
     height: 100%;
     width: 40% ;
 }
+.admin-post-resume{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    height: 100%;
+    width: 100%;
+}
 .post-image{
     display: flex;
     justify-content: center;
     height: 100%;
     width: 60%;
 }
+
+.admin-post-image{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.admin-post-image img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.admin-post-title{
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+    line-height: 0.9em;
+    color: #7a29d0;
+}
+
 .post-title{
     font-family: 'Russo One', sans-serif;
     font-size: 2.4em;
@@ -241,19 +276,22 @@ select, input, .btn-search{
     outline: none;
 }
 .btn-search{
+    display: flex;
+    align-items: center;
     text-align: center;
     align-content: center;
     cursor: pointer;
     background-color: #7a29d0;
     transition: .6s;
     color: #FFF;
+    text-decoration: none;
 }
 .btn-search:hover{
     background-color: #57179c;
 }
 
 .btn-search ion-icon {
-    --ionicon-stroke-width: 90px;
+    --ionicon-stroke-width: 70px;
   }
 
 select, input{

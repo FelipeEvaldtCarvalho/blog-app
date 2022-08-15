@@ -9,6 +9,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Services\Newsletter;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use \Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,21 @@ use Illuminate\Support\Facades\DB;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// rotas v4 com vue
+Route::get('/home', [PostController::class, 'home']);
+
+Route::get('/about', function ()
+{
+    return inertia('About');
+});
+
+Route::get('/users', function ()
+{
+    return inertia('Users');
+});
+
+//rotas v1 com blade
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 

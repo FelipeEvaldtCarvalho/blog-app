@@ -30,15 +30,14 @@ class AdminPostController extends Controller
 
     public function store()
     {
-        $attributes['slug'] = str_replace(' ', '', request('title'));
-
         $attributes = request()->validate([
             'category_id' => ['required', Rule::exists('categories', 'id')],
             'thumb' => 'required | image',
             'title' => ['required', Rule::unique('posts', 'title')],
             'body' => 'required',
-            'slug' => ['required', Rule::unique('posts', 'slug')]
         ]);
+
+        $attributes['slug'] = str_replace(' ', '', request('title'));
 
         $attributes['user_id'] = auth()->id();
 
@@ -80,14 +79,14 @@ class AdminPostController extends Controller
 
         $post->update($attributes);
 
-        return back()->with('sucess', 'Publição atualizada com sucesso!');
+        return redirect('/admin/posts')->with('success', 'Publição atualizada com sucesso!');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
 
-        return back()->with('sucess', 'Publição excluida com sucesso!');
+        return redirect('/admin/posts')->with('success', 'Publição excluida com sucesso!');
     }
 
 }

@@ -7,12 +7,24 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Validation\Rule;
+use \Inertia\Inertia;
 
 class PostController extends Controller
 {
     public function index()
-    {
+    {   
         return view('post.index', [
+            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(5)->withQueryString(),
+            'categories' => Category::all(),
+            'authors' => User::all(),
+            'currentCategory' => Category::firstWhere('slug', request('category')),
+            'currentAuthor' => User::firstWhere('username', request('author')),
+        ]);
+    }
+    
+    public function home()
+    {
+        return Inertia::render('Home', [
             'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(5)->withQueryString(),
             'categories' => Category::all(),
             'authors' => User::all(),

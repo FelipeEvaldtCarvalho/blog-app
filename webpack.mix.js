@@ -12,6 +12,14 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .vue({
+        options: {
+            compilerOptions: {
+                isCustomElement: (tag) => ['ion-icon'].includes(tag),
+            },
+        },
+    })
     .postCss('resources/css/app.css', 'public/css', [
         //
-    ]);
+    ])
+    .version();
